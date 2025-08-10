@@ -10,3 +10,15 @@ if num > 0:
         print("It is also odd.")
 else:
     print("The number is not positive.")
+
+age = 20
+citizen = False
+
+if age >= 18:                 # Stage 1: Age check
+    print("You are an adult.") # Action 1
+    if citizen:               # Stage 2: Citizenship check
+        print("You can vote!") # Action 2
+    else:
+        print("But you are not a citizen, so you cannot vote.") # Different action
+else:
+    print("You are not an adult.") # Action if Stage 1 fails
