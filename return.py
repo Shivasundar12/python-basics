@@ -31,12 +31,9 @@ def find_first_even(nums):
             return n     # returns immediately when first even is found
     return None
 
-print(find_first_even([1, 3, 5, 8, 10]))  # 8
+print(find_first_even([1, 3, 5, 7,14 ]))  
 
 
 
 
-# 1. break → Stop the loop completely
-#Ends the loop right away, even if there are more items left to process.
 
-#Used when you found what you were looking for and don’t need to continue.
