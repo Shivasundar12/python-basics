@@ -33,6 +33,66 @@ def find_first_even(nums):
 
 print(find_first_even([1, 3, 5, 7,14 ]))  
 
+# this function does not return anything explicitly
+# so it returns None by default
+def print_square(x):
+    print(x * x)
+
+# result = print_square(4)  # prints 16
+# print("Result:", result)  # prints "Result: None"
+
+
+# multiple return statements
+def odd_even_checker(num):
+    if num % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+    
+    print("This won't print")  # unreachable code
+# print(odd_even_checker(10))  # prints "Even"
+# print(odd_even_checker(7))   # prints "Odd"
+
+# Returning Multiple Values
+
+
+def calculate_stats(numbers):
+    total = sum(numbers)
+    average = total / len(numbers)
+    return total, average  # returns a tuple
+stats = calculate_stats([10, 20, 30, 40])
+print(stats)
+
+
+# early return to avoid deep nesting
+def validate_email(email):
+    if "@" not in email:
+        return "Invalid email: missing '@'"
+    if "." not in email.split("@")[1]:
+        return "Invalid email: missing domain"
+    
+    return True
+print(validate_email("shiva3sundar@gmail.com"))
+print(validate_email("invalidemail.com"))
+
+# real-world example
+
+# user authetication function
+def authenticate(username, password, DB):
+    if username not in DB:
+        return "Username not found"
+    if DB[username] != password:
+        return "Incorrect password"
+    return "Login successful"
+# mock database
+mock_db = { 
+    'alice': {'password': 'shiva3sundar', 'is_active': True, 'role': 'admin' },
+    'carl': {'password': 'siva123', 'is_active': False, 'role': 'student' }
+}
+
+result = authenticate('alice', 'password123', mock_db)
+print(result)  # prints "Login successful"
+
 
 
 
