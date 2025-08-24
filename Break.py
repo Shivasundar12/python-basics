@@ -10,13 +10,13 @@ for i in range(5):
     if i == age:
         print("Found the age:", i)
         break  # Stop the loop when age is found
-    print("Current number:", i)
+    # print("Current number:", i)
 
 
 for n in range(1, 10):
     if n == 5:
         break   # stop the loop entirely when n == 5
-    print(n)
+    # print(n)
 
 # What it does: Ends the current loop immediately and moves execution to the code after that loop.
 
@@ -26,29 +26,59 @@ for n in range(1, 10):
 # return using break in a while loop
 
 
-import random
+# import random
 
-secret_number = random.randint(1, 100)
-max_attempts = 10
-attempts = 0
+# secret_number = random.randint(1, 100)
+# max_attempts = 10
+# attempts = 0
 
-print("Welcome to the Number Guessing Game!")
-print("I'm thinking of a number between 1 and 100")
-print(f"You have {max_attempts} attempts to guess it!")
+# print("Welcome to the Number Guessing Game!")
+# print("I'm thinking of a number between 1 and 100")
+# # print(f"You have {max_attempts} attempts to guess it!")
 
-while True:
-    guess = int(input("Enter your guess: "))
-    attempts += 1   # increase attempts every guess
+# while True:
+#     guess = int(input("Enter your guess: "))
+#     attempts += 1   # increase attempts every guess
 
-    if guess == secret_number:
-        print(f"🎉 Congratulations! You guessed the number in {attempts} attempts!")
-        break   # exit loop when correct guess
-    elif guess < secret_number:
-        print("Too low! Try again.")
-    else:
-        print("Too high! Try again.")
+#     if guess == secret_number:
+#         print(f"🎉 Congratulations! You guessed the number in {attempts} attempts!")
+#         break   # exit loop when correct guess
+#     elif guess < secret_number:
+#         print("Too low! Try again.")
+#     else:
+#         print("Too high! Try again.")
 
-    if attempts >= max_attempts:
-        print(f"❌ Sorry, you've used all {max_attempts} attempts. The number was {secret_number}.")
-        break   # exit when attempts are over
+#     if attempts >= max_attempts:
+#         print(f"❌ Sorry, you've used all {max_attempts} attempts. The number was {secret_number}.")
+#         break   # exit when attempts are over
 
+# break using while and return for exmaple
+
+
+
+
+def find_with_break(numbers, target):
+    for num in numbers:
+        if numbers == target:
+            print(f"Found {target}!")
+            break
+    print("still in function after break")
+    return "Function complete"
+
+def find_with_return(numbers,target):
+    for num in numbers:
+        if num == target:
+            print(f"Found {target}!")
+            return "Function complete"
+    print("this won't print if target is found")
+    return("Function complete")
+
+
+numbers= [1,2,3,4,5,7,8,9,10]
+
+
+result1 = find_with_break(numbers, 5)
+print(result1)
+
+result2 = find_with_return(numbers, 7)
+print(result2)
