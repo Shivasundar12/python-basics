@@ -94,6 +94,30 @@ result = authenticate('alice', 'password123', mock_db)
 print(result)  # prints "Login successful"
 
 
+#  Banking: Transaction Validation
 
+def validate_transaction(account_balence, amount, transaction_type):
+    if amount <=0:
+        return {"success": False , "message": "Amount must be positive"}
+    if transaction_type == 'withdraw':
+        if amount > account_balence:
+            return {"success": False , "message": "Insufficient funds"}
+        new_balance = account_balence - amount
+    elif transaction_type == 'deposit':
+        new_balance = account_balence + amount
+    else:
+        return {"success": False , "message": "Invalid transaction type"}
+    return {"success": True, "new_balance": new_balance}
+
+result = validate_transaction(1000, 500, 'withdraw')
+print(result)  # prints "Insufficient funds"
+
+# maximum of two numbers using return 
+def max_of_two(a, b):
+    if a > b:
+        return a
+    else:
+        return b
+print(max_of_two(10, 20))  # prints 20
 
 
