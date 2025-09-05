@@ -33,3 +33,28 @@ if  num1 % 2 == 0:
 else:
     print("The number is odd.")
 
+
+
+# Problem 1: The Movie Theater
+# Scenario: A movie theater has the following rules:
+
+# You must be 13 or older to watch a PG-13 movie.
+
+# If you are under 16, you must be accompanied by an adult (over 18) for any movie after 8 PM.
+
+age = int(input("Enter your age: "))
+time = int(input("Enter the movie time (in 24-hour format): "))
+adult_accompany = input("Are you accompanied by an adult? (yes/no): ").lower() == 'yes'
+
+if age >=13:
+    if time >20 and age <16:
+        print("You need to be accompanied by an adult to watch this movie.")
+        if adult_accompany == yes:
+            print("You can watch the movie.")
+        else:
+            print("You cannot watch the movie without an adult.")
+    else:
+        print("You can watch the movie.")
+
+
+        

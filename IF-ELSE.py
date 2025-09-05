@@ -38,3 +38,8 @@ else:
 # Scenario: A door has a keypad and only opens if you enter the correct code.
 # The "if" logic: IF the entered code matches the secret code, THEN unlock the door.
 
+secret_code = input("enter the secret code:")
+if secret_code == 1902873:
+    print("Door unlocked.")
+else:
+    print("Incorrect code. Access denied.")
