@@ -49,7 +49,7 @@ adult_accompany = input("Are you accompanied by an adult? (yes/no): ").lower() =
 if age >=13:
     if time >20 and age <16:
         print("You need to be accompanied by an adult to watch this movie.")
-        if adult_accompany == yes:
+        if adult_accompany == "yes":
             print("You can watch the movie.")
         else:
             print("You cannot watch the movie without an adult.")
@@ -57,4 +57,21 @@ if age >=13:
         print("You can watch the movie.")
 
 
-        
+# Problem 1: Concert Ticket Access
+# Scenario: A concert is for adults (18+). Furthermore, to enter the VIP section, you must also have a VIP pass.
+# Logic:
+# First, check if the person is an adult.
+# If they are, then check if they have a VIP pass.
+# If they do, grant VIP access.
+
+age = int(input("Enter your age: "))
+vip_pass = input("Do you have a VIP pass? (yes/no): ").lower() == 'yes'
+
+if age >=18:
+    print("You are a adult and allowed to enter the concert")
+    if vip_pass:
+        print("You have a VIP pass and can enter the VIP section.")
+    else:
+        print("You do not have a VIP pass and cannot enter the VIP section.")
+else:
+    print("You are not an adult and cannot enter the concert.")
