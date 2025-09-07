@@ -75,3 +75,26 @@ if age >=18:
         print("You do not have a VIP pass and cannot enter the VIP section.")
 else:
     print("You are not an adult and cannot enter the concert.")
+
+
+# Problem 2: Online Purchase Approval
+# Scenario: An online store requires a purchase to be over $50 for free shipping. Additionally, the item must be in stock.
+
+# Logic:
+# First, check if the cart total is over $50.
+# If it is, then check if the item is in stock.
+# If it is, offer free shipping.
+
+cart_total = float(input("Enter your cart total: $"))
+in_stock = input("Is the item in stock? (yes/no): ").lower() == 'yes'
+if cart_total >= 50:
+    print("your products are available for free shipping!")
+    if in_stock:
+        print("The item is in stock. You can proceed to checkout with free shipping.")
+    else:
+        print("The item is not in stock. Please check back later.")
+else:
+    print("Your cart total is less than $50. Free shipping is not available.")
+
+
+
