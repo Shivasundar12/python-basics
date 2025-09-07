@@ -98,3 +98,56 @@ else:
 
 
 
+# Problem 3: Weather-appropriate Clothing Advisor
+# Create a program that gives clothing advice based on the weather:
+# If the temperature is below 50°F, advise to "Wear a jacket."
+# If it's also raining, advise to "Bring an umbrella."
+# If the wind_speed is over 15 mph, add "Make it a strong umbrella!"
+# If it's not raining but the temperature is below 32°F, advise to "Wear heavy gloves and a hat."
+# If the temperature is 50°F or above, advise "Light clothing should be fine."
+# Use the variables temperature, is_raining, and wind_speed.
+
+temperature = float(input("Enter the temperature in °F: "))
+is_raining = input("Is it raining? (yes/no): ").lower() == 'yes'
+wind_speed = float(input("Enter the wind speed in mph: "))
+if temperature < 50:
+    print("wear a jacket")
+    if is_raining:
+        print("bring an umbrella")
+        if wind_speed > 15:
+            print("make it a strong umbrella!")
+        elif temperature < 32:
+            print("wear heavy gloves and a hat")
+else:
+    print("light clothing should be fine")
+
+
+# Problem 4: College Admission Chance Estimator
+# A university estimates admission chances based on:
+# First, a GPA of at least 3.5 is required.
+# If GPA is sufficient, an SAT score of at least 1300 is required for a strong chance.
+# If the student also has a strong letter of recommendation, they are "Likely accepted."
+# If not, their application is "Under review."
+# If the GPA is sufficient but the SAT score is between 1200 and 1299, the application is "Borderline... will be reviewed."
+# If the GPA is sufficient but the SAT is below 1200, the score is "too low."
+# If the GPA is below 3.5, the applicant does "not meet minimum requirements."
+# Use gpa, sat_score, and has_recommendation variables. Print the admission status.
+
+
+gpa = float(input("Enter your GPA: "))
+sat_score = int(input("Enter your SAT score: "))
+has_recommendation = input("Do you have a strong letter of recommendation? (yes/no): ").lower() == 'yes'
+if gpa >= 3.5:
+    print("you have sufficient GPA")
+    if sat_score >=1300:
+        if has_recommendation:
+            print("likely accepted")
+        else:
+            print("under review")
+    elif 1200 <= sat_score < 1300:
+        print("borderline... will be reviewed")
+    else:
+        print("your SAT score is too low")
+else:
+    print("you do not meet minimum requirements")
+
