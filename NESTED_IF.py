@@ -134,6 +134,7 @@ else:
 # Use gpa, sat_score, and has_recommendation variables. Print the admission status.
 
 
+
 gpa = float(input("Enter your GPA: "))
 sat_score = int(input("Enter your SAT score: "))
 has_recommendation = input("Do you have a strong letter of recommendation? (yes/no): ").lower() == 'yes'
@@ -150,4 +151,8 @@ if gpa >= 3.5:
         print("your SAT score is too low")
 else:
     print("you do not meet minimum requirements")
+
+
+
+
 
