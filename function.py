@@ -36,3 +36,16 @@ print("Result from return function:", result)  # This will print 7 because add()
 # print → showcase window in a pizza shop 🍕 (you see it but can’t take it home).
 # return → pizza packed in a box 📦 (you can take it, store it, eat it later, give it to others).
 
+# Example 3: Checking Even/Odd
+
+def is_even(num):
+    if num % 2 == 0:
+        return True
+    else:
+        return False
+result = is_even(11)
+print("Is 11 even?", result)  # This will print True because 10 is even
+
+
+
+
