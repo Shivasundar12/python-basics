@@ -12,3 +12,6 @@ Example:
 If it's 77°F:
 °C = (77 - 32) \times \frac{5}{9} = 25°C
 Let me know if you want a quick converter or a Python snippet to automate this!
+
+
+
